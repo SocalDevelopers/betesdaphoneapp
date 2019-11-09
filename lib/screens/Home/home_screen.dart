@@ -26,7 +26,7 @@ class _HomeState extends State<Home> {
         leftIcon: FontAwesomeIcons.th,
         height: 150,
       ),
-      body: ListView(
+      body: Column(
         children: <Widget>[
           Row(
             children: <Widget>[
@@ -94,7 +94,8 @@ class _HomeState extends State<Home> {
           SizedBox(
             height: 50,
           ),
-          MyHomePage()
+          Expanded(child: Ministerios()),
+          Expanded(child: Container())
         ],
       ),
     );
