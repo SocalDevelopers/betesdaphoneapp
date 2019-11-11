@@ -31,4 +31,4 @@ final fadedColor = Color(0xff575d7f);
 final subTitleText = Color(0xff606687);
 final actionBoxes = Color(0xff182135);
 final inactiveColor = Color(0xffc6b7d6);
-final activeColor = Color(0xfffffbff);
+final activeColor = Color(0xffbffbb8);

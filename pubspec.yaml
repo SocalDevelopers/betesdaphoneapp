@@ -24,10 +24,6 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   font_awesome_flutter: ^8.5.0
-  flutter_swiper: ^1.1.6
-  scrolling_page_indicator: ^0.1.2
-  deck_scrollview: ^0.1.0
-  parallax_image: ^0.3.1+1
 
 dev_dependencies:
   flutter_test:

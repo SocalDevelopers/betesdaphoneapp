@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ministerios_betesda/components/custom_app_bar.dart';
 import 'package:ministerios_betesda/screens/Home/home_screen.dart';
-import 'package:ministerios_betesda/screens/landing_page/landing_screen.dart';
 
 class LoadingScreen extends StatefulWidget {
+  static const String id = 'LoadingScreen';
   @override
   _LoadingScreenState createState() => _LoadingScreenState();
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'constants.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MyCustomAppBar2 extends StatelessWidget implements PreferredSizeWidget {
   final double height;
@@ -8,13 +7,17 @@ class MyCustomAppBar2 extends StatelessWidget implements PreferredSizeWidget {
   final String subTitle;
   final IconData leftIcon;
   final IconData rightIcon;
+  final Function leftTap;
+  final Function rightTap;
 
   MyCustomAppBar2(
       {this.title = 'betesda',
       this.subTitle = 'Casa de misericordia',
       this.height,
       this.leftIcon,
-      this.rightIcon});
+      this.rightIcon,
+      this.leftTap,
+      this.rightTap});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -30,7 +33,7 @@ class MyCustomAppBar2 extends StatelessWidget implements PreferredSizeWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           InkWell(
-            onTap: () {},
+            onTap: leftTap,
             child: Icon(
               leftIcon,
               color: fadedColor,
@@ -44,14 +47,17 @@ class MyCustomAppBar2 extends StatelessWidget implements PreferredSizeWidget {
                 style: kTitleText,
               ),
               Text(
-                subTitle,
+                subTitle.toUpperCase(),
                 style: kSubtitleText,
               ),
             ],
           ),
-          Icon(
-            rightIcon,
-            color: fadedColor,
+          InkWell(
+            onTap: rightTap,
+            child: Icon(
+              rightIcon,
+              color: fadedColor,
+            ),
           )
         ],
       ),

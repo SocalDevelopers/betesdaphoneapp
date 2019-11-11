@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:ministerios_betesda/components/custom_slider.dart';
-import 'package:ministerios_betesda/screens/Ministerios/lista_de_ministerios.dart';
-import 'package:parallax_image/parallax_image.dart';
+import 'package:ministerios_betesda/screens/Ministerios/ministerios_description.dart';
+import 'package:ministerios_betesda/screens/Ministerios/ministerios_slider_items.dart';
 
-class Ministerios extends StatelessWidget {
-  SliderItems slider = SliderItems();
+class MinisteriosSlider extends StatelessWidget {
+  final MinisteriosSliderItems slider = MinisteriosSliderItems();
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -19,7 +18,7 @@ class Ministerios extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context)
                         .push(MaterialPageRoute(builder: (context) {
-                      return MinisteriosItems(
+                      return MinisteriosDescription(
                         imageUrl: slider.sliderContent[index].imagesrc,
                         ministerioSubtitulo:
                             slider.sliderContent[index].subTitle,

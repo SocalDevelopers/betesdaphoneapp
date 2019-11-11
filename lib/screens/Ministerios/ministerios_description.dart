@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class MinisteriosItems extends StatelessWidget {
+class MinisteriosDescription extends StatelessWidget {
   final String imageUrl;
   final String ministerioTitulo;
   final String ministerioSubtitulo;
-  MinisteriosItems(
+  MinisteriosDescription(
       {this.ministerioTitulo, this.ministerioSubtitulo, this.imageUrl});
   @override
   Widget build(BuildContext context) {

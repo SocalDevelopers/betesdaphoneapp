@@ -1,20 +1,14 @@
 PODS:
-  - deck_scrollview (0.0.1):
-    - Flutter
   - Flutter (1.0.0)
 
 DEPENDENCIES:
-  - deck_scrollview (from `.symlinks/plugins/deck_scrollview/ios`)
   - Flutter (from `Flutter`)
 
 EXTERNAL SOURCES:
-  deck_scrollview:
-    :path: ".symlinks/plugins/deck_scrollview/ios"
   Flutter:
     :path: Flutter
 
 SPEC CHECKSUMS:
-  deck_scrollview: 84e7d118dd95f15c58d510d040c867e05407026f
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
 
 PODFILE CHECKSUM: 1b66dae606f75376c5f2135a8290850eeb09ae83

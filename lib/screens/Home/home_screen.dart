@@ -1,11 +1,13 @@
-import 'package:flutter/cupertino.dart';
+//import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:ministerios_betesda/components/constants.dart';
 import 'package:ministerios_betesda/components/custom_app_bar.dart';
-import 'package:ministerios_betesda/screens/Home/home_items.dart';
+import 'package:ministerios_betesda/screens/Ministerios/ministerios_slider.dart';
+import 'package:ministerios_betesda/screens/landing_page/landing_screen.dart';
 
 class Home extends StatefulWidget {
+  static const String id = 'Home';
   @override
   _HomeState createState() => _HomeState();
 }
@@ -22,6 +24,10 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MyCustomAppBar2(
+        leftTap: () {
+          Navigator.pushNamed(context, LandingScreen.id);
+          print('pressded');
+        },
         rightIcon: FontAwesomeIcons.shieldAlt,
         leftIcon: FontAwesomeIcons.th,
         height: 150,
@@ -95,7 +101,7 @@ class _HomeState extends State<Home> {
             height: 50,
           ),
           Expanded(
-            child: Ministerios(),
+            child: MinisteriosSlider(),
           ),
         ],
       ),
