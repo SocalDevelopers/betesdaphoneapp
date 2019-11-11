@@ -27,6 +27,7 @@ dependencies:
   flutter_swiper: ^1.1.6
   scrolling_page_indicator: ^0.1.2
   deck_scrollview: ^0.1.0
+  parallax_image: ^0.3.1+1
 
 dev_dependencies:
   flutter_test:

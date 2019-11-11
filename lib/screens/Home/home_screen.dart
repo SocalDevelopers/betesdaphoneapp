@@ -94,8 +94,9 @@ class _HomeState extends State<Home> {
           SizedBox(
             height: 50,
           ),
-          Expanded(child: Ministerios()),
-          Expanded(child: Container())
+          Expanded(
+            child: Ministerios(),
+          ),
         ],
       ),
     );

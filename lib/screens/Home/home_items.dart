@@ -1,57 +1,46 @@
 import 'package:flutter/material.dart';
 import 'package:ministerios_betesda/components/custom_slider.dart';
+import 'package:ministerios_betesda/screens/Ministerios/lista_de_ministerios.dart';
+import 'package:parallax_image/parallax_image.dart';
 
-class Ministerios extends StatefulWidget {
-  @override
-  _MinisteriosState createState() => _MinisteriosState();
-}
-
-class _MinisteriosState extends State<Ministerios> {
-  final controller = PageController();
+class Ministerios extends StatelessWidget {
   SliderItems slider = SliderItems();
-  List<SliderItems> items = [];
-
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
       itemCount: slider.sliderContent.length,
       itemBuilder: (context, index) {
         return Container(
-          child: Container(
-            decoration: BoxDecoration(boxShadow: [
-              BoxShadow(spreadRadius: 1, blurRadius: 1, color: Colors.black26)
-            ]),
-            child: Row(
-              children: <Widget>[
-                Expanded(
-                  flex: 4,
-                  child: Container(
-                    child: Image.network(slider.sliderContent[index].imagesrc),
-                    color: Colors.red,
-                  ),
-                ),
-                Expanded(
-                  child: Container(
+          child: Row(
+            children: <Widget>[
+              Expanded(
+                flex: 4,
+                child: InkWell(
+                  onTap: () {
+                    Navigator.of(context)
+                        .push(MaterialPageRoute(builder: (context) {
+                      return MinisteriosItems(
+                        imageUrl: slider.sliderContent[index].imagesrc,
+                        ministerioSubtitulo:
+                            slider.sliderContent[index].subTitle,
+                        ministerioTitulo: slider.sliderContent[index].title,
+                      );
+                    }));
+                  },
+                  child: Card(
+                    elevation: 15,
                     child: Column(
                       children: <Widget>[
-                        ListView.builder(
-                          itemCount: slider.sliderContent.length + 5,
-                          itemBuilder: (context, index) {
-                            return Container(
-                              margin: EdgeInsets.only(top: 13),
-                              height: 2,
-                              color: Colors.black26,
-                            );
-                          },
-                          shrinkWrap: true,
-                          physics: ClampingScrollPhysics(),
-                        ),
+                        Image.network(slider.sliderContent[index].imagesrc),
+                        Text(slider.sliderContent[index].title),
+                        Text(slider.sliderContent[index].subTitle),
                       ],
                     ),
+                    color: Colors.white.withOpacity(.2),
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         );
       },
