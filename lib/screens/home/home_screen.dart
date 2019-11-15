@@ -1,18 +1,19 @@
-//import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:ministerios_betesda/components/custom_bottom_app_bar.dart';
 import 'package:ministerios_betesda/components/constants.dart';
 import 'package:ministerios_betesda/components/custom_app_bar.dart';
 import 'package:ministerios_betesda/screens/Ministerios/ministerios_slider.dart';
 import 'package:ministerios_betesda/screens/landing_page/landing_screen.dart';
+import 'package:ministerios_betesda/components/custom_gradient.dart';
 
-class Home extends StatefulWidget {
-  static const String id = 'Home';
+class HomeItems extends StatefulWidget {
+  static const String id = 'HomeItems';
   @override
-  _HomeState createState() => _HomeState();
+  _HomeItemsState createState() => _HomeItemsState();
 }
 
-class _HomeState extends State<Home> {
+class _HomeItemsState extends State<HomeItems> {
   final inactiveColor = fadedColor;
   final activeColor = kTitleText.color;
   double transparancy = 0;
@@ -26,7 +27,6 @@ class _HomeState extends State<Home> {
       appBar: MyCustomAppBar2(
         leftTap: () {
           Navigator.pushNamed(context, LandingScreen.id);
-          print('pressded');
         },
         rightIcon: FontAwesomeIcons.shieldAlt,
         leftIcon: FontAwesomeIcons.th,
@@ -53,7 +53,7 @@ class _HomeState extends State<Home> {
                       ),
                       Container(
                         margin: EdgeInsets.only(top: 25),
-                        color: Colors.purple.withOpacity(
+                        color: Colors.green.withOpacity(
                             selected ? transparancy = 1 : transparancy = 0),
                         height: 4,
                       )
@@ -65,7 +65,7 @@ class _HomeState extends State<Home> {
                 child: Container(
                   margin: EdgeInsets.only(top: 45, left: 7, right: 7),
                   height: 4,
-                  color: Colors.purple,
+                  color: Colors.green,
                 ),
               ),
               Expanded(
@@ -85,7 +85,7 @@ class _HomeState extends State<Home> {
                       ),
                       Container(
                         margin: EdgeInsets.only(top: 25),
-                        color: Colors.purple.withOpacity(
+                        color: Colors.green.withOpacity(
                             selected ? transparancy = 0 : transparancy = 1),
                         height: 4,
                       ),
@@ -95,13 +95,28 @@ class _HomeState extends State<Home> {
               )
             ],
           ),
-
-//
-          SizedBox(
-            height: 50,
+          GradientInset(
+            start: Alignment.bottomRight,
+            end: Alignment.topRight,
           ),
           Expanded(
-            child: MinisteriosSlider(),
+            flex: 3,
+            child: ListView(
+              children: <Widget>[
+                MinisteriosSlider(),
+              ],
+              shrinkWrap: true,
+              physics: ClampingScrollPhysics(),
+            ),
+          ),
+          GradientInset(
+            start: Alignment.topRight,
+            end: Alignment.bottomRight,
+          ),
+          Expanded(
+            child: Container(
+              margin: EdgeInsets.only(top: 20),
+            ),
           ),
         ],
       ),

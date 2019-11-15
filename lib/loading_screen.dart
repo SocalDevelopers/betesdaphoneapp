@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ministerios_betesda/screens/Home/home_screen.dart';
+import 'package:ministerios_betesda/screens/Home/home.dart';
 
 class LoadingScreen extends StatefulWidget {
   static const String id = 'LoadingScreen';
