@@ -4,6 +4,7 @@ import 'package:ministerios_betesda/components/custom_bottom_app_bar.dart';
 import 'package:ministerios_betesda/components/constants.dart';
 import 'package:ministerios_betesda/components/custom_app_bar.dart';
 import 'package:ministerios_betesda/screens/Ministerios/ministerios_slider.dart';
+import 'package:ministerios_betesda/screens/home/home_drawer.dart';
 import 'package:ministerios_betesda/screens/landing_page/landing_screen.dart';
 import 'package:ministerios_betesda/components/custom_gradient.dart';
 
@@ -24,6 +25,9 @@ class _HomeItemsState extends State<HomeItems> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: Container(),
+      ),
       appBar: MyCustomAppBar2(
         leftTap: () {
           Navigator.pushNamed(context, LandingScreen.id);

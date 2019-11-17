@@ -70,7 +70,7 @@ class MinisteriosDescription extends StatelessWidget {
           Text(description),
         ],
       ),
-      bottomNavigationBar: CustomBottomAppBar(),
+//      bottomNavigationBar: CustomBottomAppBar(),
     );
   }
 }

@@ -14,6 +14,7 @@ class Betesda extends StatelessWidget {
         primaryColor: Color(0xff1c243d),
         accentColor: Colors.white,
         primaryIconTheme: IconThemeData(opacity: .2),
+        canvasColor: Color(0xff1D253F),
         backgroundColor: Color(0xff1D253F),
         scaffoldBackgroundColor: Color(0xff1c243d),
         appBarTheme: AppBarTheme(color: Color(0xff1c243d)),

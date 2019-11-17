@@ -21,14 +21,7 @@ class MyCustomAppBar2 extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 90, bottom: 10),
-//      decoration: BoxDecoration(
-//        color: Colors.blueGrey,
-//        borderRadius: BorderRadius.only(
-//          bottomLeft: Radius.circular(30),
-//          bottomRight: Radius.circular(30),
-//        ),
-//      ),
+      padding: EdgeInsets.only(top: 30, bottom: 30),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
